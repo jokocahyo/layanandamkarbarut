@@ -7,14 +7,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans leading-relaxed min-h-screen flex flex-col"
-      style="background: linear-gradient(to bottom right, rgba(255,255,255,0.6), rgba(200,200,200,0.6)), url('asset/bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"
+      style="background: linear-gradient(to bottom right, rgba(255,255,255,0.6), rgba(200,200,200,0.6)), url('asset/bg.jpg'); background-size: cover; background-position: center;">
+
   <!-- Header -->
   <header class="bg-red-700 text-white py-6 shadow">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4 px-4">
-      <!-- Logo -->
       <img src="asset/Logo.png" alt="Logo Damkar" class="h-12 md:h-16">
-
-      <!-- Text -->
       <div class="text-center md:text-left">
         <h1 class="text-2xl md:text-3xl font-bold">Dinas Pemadam Kebakaran & Penyelamatan</h1>
         <p class="text-sm md:text-base">Kabupaten Barito Utara</p>
@@ -30,13 +28,13 @@
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- SOP Layanan -->
+      <!-- SOP -->
       <div class="bg-white shadow rounded-xl p-6 text-center hover:shadow-lg transition">
         <div class="text-5xl mb-4">📑</div>
         <h3 class="font-semibold text-lg mb-2">SOP Layanan</h3>
         <p class="text-gray-600 mb-5 text-base">Panduan prosedur layanan Damkar agar lebih mudah dipahami masyarakat.</p>
         <a href="asset/sop.png" target="_blank" class="w-full">
-          <button class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-blue-700 transition">
+          <button class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-green-700 transition">
             📖 Lihat SOP
           </button>
         </a>
@@ -54,13 +52,13 @@
         </div>
       </a>
 
-      <!-- Tips Pencegahan -->
+      <!-- Tips -->
       <div class="bg-white shadow rounded-xl p-6 text-center hover:shadow-lg transition">
         <div class="text-5xl mb-4">🔥</div>
         <h3 class="font-semibold text-lg mb-2">Tips Pencegahan</h3>
         <p class="text-gray-600 mb-5 text-base">Infografis praktis untuk mengurangi risiko kebakaran di rumah maupun tempat kerja.</p>
         <a href="asset/tips.pdf" class="block">
-          <button class="w-full bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-green-700 transition">
+          <button class="w-full bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-yellow-700 transition">
             📊 Lihat Tips
           </button>
         </a>
@@ -77,28 +75,36 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- APAR -->
-      <a href="https://www.youtube.com/shorts/F4DqTCSycKM" target="_blank" class="block">
-        <div class="bg-white/90 shadow rounded-xl p-6 text-center hover:shadow-lg transition">
-          <div class="text-5xl mb-4">🧯</div>
-          <h3 class="font-semibold text-lg mb-2">Menggunakan APAR</h3>
-          <p class="text-gray-600 mb-5 text-base">Panduan penggunaan Alat Pemadam Api Ringan (APAR).</p>
-          <button class="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-red-700 transition">
-            ▶️ Tonton Video
-          </button>
+      <div class="bg-white/90 shadow rounded-xl p-6 text-center hover:shadow-lg transition">
+        <div class="text-5xl mb-4">🧯</div>
+        <h3 class="font-semibold text-lg mb-4">Menggunakan APAR</h3>
+        <div class="aspect-video rounded-lg overflow-hidden">
+          <iframe class="w-full h-full"
+            src="https://www.youtube.com/embed/F4DqTCSycKM"
+            title="Tutorial APAR"
+            frameborder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
-      </a>
+      </div>
 
       <!-- Handuk Basah -->
-      <a href="https://www.youtube.com/shorts/FHMu0wbv7IE" target="_blank" class="block">
-        <div class="bg-white/90 shadow rounded-xl p-6 text-center hover:shadow-lg transition">
-          <div class="text-5xl mb-4">🧻</div>
-          <h3 class="font-semibold text-lg mb-2">Menggunakan Handuk/Kain Basah</h3>
-          <p class="text-gray-600 mb-5 text-base">Cara sederhana memadamkan api kecil menggunakan kain basah.</p>
-          <button class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-blue-700 transition">
-            ▶️ Tonton Video
-          </button>
+      <div class="bg-white/90 shadow rounded-xl p-6 text-center hover:shadow-lg transition">
+        <div class="text-5xl mb-4">🧻</div>
+        <h3 class="font-semibold text-lg mb-4">Menggunakan Handuk/Kain Basah</h3>
+        <div class="aspect-video rounded-lg overflow-hidden">
+          <iframe class="w-full h-full"
+            src="https://www.youtube.com/embed/FHMu0wbv7IE"
+            title="Tutorial Handuk Basah"
+            frameborder="0"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 
@@ -111,7 +117,3 @@
 
 </body>
 </html>
-
-
-
-
