@@ -12,6 +12,17 @@
     html { scroll-behavior: smooth; }
     .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(6px); }
     .slider::-webkit-scrollbar { display: none; }
+
+    /* Animasi fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-gray-50">
@@ -56,11 +67,11 @@
         </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <a href="https://wa.me/62811521113" target="_blank" 
-            class="inline-flex items-center justify-center gap-2 bg-red-600 text-white font-semibold px-6 py-4 rounded-xl text-lg shadow hover:bg-red-700 transition">
+            class="inline-flex items-center justify-center gap-2 bg-red-600 text-white font-semibold px-6 py-4 rounded-xl text-lg shadow hover:bg-red-700 hover:scale-105 transition-transform">
             📞 Hubungi Damkar
           </a>
           <a href="#sop" 
-            class="inline-flex items-center justify-center gap-2 bg-white text-red-600 font-semibold px-6 py-4 rounded-xl text-lg shadow hover:bg-gray-100 transition">
+            class="inline-flex items-center justify-center gap-2 bg-white text-red-600 font-semibold px-6 py-4 rounded-xl text-lg shadow hover:bg-gray-100 hover:scale-105 transition-transform">
             📋 Informasi
           </a>
         </div>
@@ -68,14 +79,14 @@
     </section>
 
     <!-- SOP Layanan -->
-    <section id="sop" class="max-w-5xl mx-auto px-4 py-12">
+    <section id="sop" class="max-w-5xl mx-auto px-4 py-12 fade-in">
       <h3 class="text-xl font-semibold mb-4">Alur Laporan</h3>
       <p class="text-sm text-slate-600 mb-6">Panduan alur pelaporan dari masyarakat ke Damkar.</p>
       <img src="asset/sop.png" alt="SOP Layanan" class="rounded-xl shadow-md w-full" />
     </section>
 
     <!-- Tips Pencegahan -->
-    <section id="tips" class="bg-white/70 glass py-12">
+    <section id="tips" class="bg-white/70 glass py-12 fade-in">
       <div class="max-w-5xl mx-auto px-4">
         <h3 class="text-xl font-semibold mb-4">Tips Pencegahan Kebakaran</h3>
 
@@ -116,7 +127,7 @@
     </section>
 
     <!-- Tutorial -->
-    <section id="tutorial" class="max-w-5xl mx-auto px-4 py-12">
+    <section id="tutorial" class="max-w-5xl mx-auto px-4 py-12 fade-in">
       <h3 class="text-xl font-semibold mb-4">Tutorial Pemadaman</h3>
       <p class="text-sm text-slate-600 mb-6">Video yang mudah diikuti untuk tindakan awal saat api kecil.</p>
       <div class="grid md:grid-cols-2 gap-6">
@@ -130,7 +141,7 @@
     </section>
 
     <!-- Wawancara -->
-    <section id="wawancara" class="bg-white/60 glass py-12">
+    <section id="wawancara" class="bg-white/60 glass py-12 fade-in">
       <div class="max-w-5xl mx-auto px-4 text-center">
         <h3 class="text-xl font-semibold mb-4">Wawancara Pimpinan</h3>
         <p class="text-sm text-slate-600 mb-6">Pengalaman dan pesan penting dari pimpinan Damkar Barito Utara.</p>
@@ -141,23 +152,23 @@
     </section>
 
     <!-- Section: Sosial Media -->
-    <section id="kontak" class="bg-gray-100 py-12">
+    <section id="kontak" class="bg-gray-100 py-12 fade-in">
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">Ikuti Sosial Media Kami</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Sosial Media Kami</h2>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
-          <a href="https://www.instagram.com/dinas_damkarmat_baritoutara/" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition">
+          <a href="https://www.instagram.com/dinas_damkarmat_baritoutara/" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition-transform">
             <img src="asset/icon/instagram.svg" alt="Instagram" class="w-8 h-8"/> 
             <span class="text-sm font-medium text-gray-800">Instagram</span>
           </a>
-          <a href="https://www.tiktok.com/@105barut" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition">
+          <a href="https://www.tiktok.com/@105barut" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition-transform">
             <img src="asset/icon/tiktok.svg" alt="TikTok" class="w-8 h-8"/>
             <span class="text-sm font-medium text-gray-800">TikTok</span>
           </a>
-          <a href="https://www.youtube.com/channel/UCzGTH2k2Ob1RfGqaD70YjZw" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition">
+          <a href="https://www.youtube.com/channel/UCzGTH2k2Ob1RfGqaD70YjZw" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition-transform">
             <img src="asset/icon/youtube.svg" alt="YouTube" class="w-8 h-8"/>
             <span class="text-sm font-medium text-gray-800">YouTube</span>
           </a>
-          <a href="https://web.facebook.com/pemadam.kebakaran.37201/" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition">
+          <a href="https://web.facebook.com/pemadam.kebakaran.37201/" target="_blank" class="flex flex-col items-center gap-2 hover:scale-105 transition-transform">
             <img src="asset/icon/facebook.svg" alt="Facebook" class="w-8 h-8"/>
             <span class="text-sm font-medium text-gray-800">Facebook</span>
           </a>
@@ -167,7 +178,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="mt-12 border-t border-slate-200 bg-white">
+  <footer class="mt-12 border-t border-slate-200 bg-white fade-in">
     <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between">
       <p class="text-sm text-slate-600">&copy; 2025 Dinas Pemadam Kebakaran & Penyelamatan Kab. Barito Utara</p>
       <p class="text-sm text-red-600 font-semibold">WhatsApp 0811-521-113</p>
@@ -175,16 +186,16 @@
   </footer>
 
   <!-- Floating Emergency Button -->
-<a href="https://wa.me/62811521113" target="_blank" 
-  class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-full p-4 flex items-center justify-center animate-bounce z-50"
-  title="WhatsApp Darurat">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" 
-       alt="WhatsApp" class="w-6 h-6 invert">
-</a>
+  <a href="https://wa.me/62811521113" target="_blank" 
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-full p-4 flex items-center justify-center animate-bounce z-50"
+    title="WhatsApp Darurat">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" 
+         alt="WhatsApp" class="w-6 h-6 invert">
+  </a>
 
-
-  <!-- Script slider -->
+  <!-- Script slider + fade-in -->
   <script>
+    // Slider dots
     const slider = document.getElementById("tipsSlider");
     const dots = document.getElementById("tipsDots");
     const slides = slider.querySelectorAll(".slide");
@@ -211,8 +222,20 @@
     slider.addEventListener("scroll", () => {
       requestAnimationFrame(updateDots);
     });
-
     updateDots();
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
